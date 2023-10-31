@@ -5,7 +5,7 @@ interface Genres {
   image_background: string;
 }
 const useGenres = () => {
-  const { data } = useData<Genres>("/genres");
-  return { data };
+  const { data, isLoading, error } = useData<Genres>("/genres");
+  return { data, isLoading, error };
 };
 export default useGenres;
