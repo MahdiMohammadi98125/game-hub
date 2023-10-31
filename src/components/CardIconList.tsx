@@ -25,12 +25,13 @@ const CardIconList = ({ platforms }: Props) => {
     mac: FaApple,
     linux: FaLinux,
     ios: MdPhoneIphone,
+    android: FaAndroid,
     web: BsGlobe,
   };
   return (
     <HStack marginY={2}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="gray.500" />
+        <Icon as={iconMap[platform.slug]} color="gray.500" key={platform.id} />
       ))}
     </HStack>
   );
