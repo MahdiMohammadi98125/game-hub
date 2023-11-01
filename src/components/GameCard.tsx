@@ -6,7 +6,7 @@ import getCroppedImageUrl from "./services/image-url";
 import Emoji from "./Emoji";
 
 interface CardInterface {
-  game: Game[];
+  game: Game;
 }
 const GameCard = ({ game }: CardInterface) => {
   return (
