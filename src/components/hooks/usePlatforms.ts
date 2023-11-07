@@ -13,8 +13,8 @@ const apiClient = new APIClient<Platform>("/platforms/lists/parents");
 const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
-    queryFn: () => apiClient.getAll,
+    queryFn: () => apiClient.getAll(),
     staleTime: 24 * 60 * 60 * 1000,
-    initialData: { count: platforms.length, results: platforms },
+    initialData: { count: platforms.length, results: platforms, next: null },
   });
 export default usePlatforms;
