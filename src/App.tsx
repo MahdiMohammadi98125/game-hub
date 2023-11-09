@@ -7,7 +7,6 @@ import GenreList from "./components/GenreList";
 import Navbar from "./components/Navbar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
-import { Platform } from "./components/hooks/usePlatforms";
 
 export interface GameQuery {
   genreId?: number;
