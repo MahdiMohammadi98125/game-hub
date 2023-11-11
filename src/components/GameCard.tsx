@@ -4,13 +4,16 @@ import CardIconList from "./CardIconList";
 import GameScore from "./GameScore";
 import getCroppedImageUrl from "./services/image-url";
 import Emoji from "./Emoji";
+import { Link } from "react-router-dom";
+
+
 
 interface CardInterface {
   game: Game;
 }
 const GameCard = ({ game }: CardInterface) => {
   return (
-    <Card>
+    <Card >
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={1}>
@@ -20,7 +23,8 @@ const GameCard = ({ game }: CardInterface) => {
           <GameScore score={game.metacritic} />
         </HStack>
         <Heading fontSize="xl">
-          {game.name} <Emoji rating={game.rating_top} />
+          <Link to={`games/${game.slug}`}>{game.name}</Link>
+          <Emoji rating={game.rating_top} />
         </Heading>
       </CardBody>
     </Card>
