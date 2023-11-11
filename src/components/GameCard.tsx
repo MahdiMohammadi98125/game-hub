@@ -1,19 +1,17 @@
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
-import { Game } from "./hooks/useGames";
+import { Game } from "./entities/Game";
 import CardIconList from "./CardIconList";
 import GameScore from "./GameScore";
 import getCroppedImageUrl from "./services/image-url";
 import Emoji from "./Emoji";
 import { Link } from "react-router-dom";
 
-
-
 interface CardInterface {
   game: Game;
 }
 const GameCard = ({ game }: CardInterface) => {
   return (
-    <Card >
+    <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={1}>
