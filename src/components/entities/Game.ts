@@ -5,6 +5,7 @@ import { Publihser } from "./Publisher";
 export interface Game {
   id: number;
   slug: string;
+  game_pk: string;
   description_raw: string;
   name: string;
   genres: Genre[];
